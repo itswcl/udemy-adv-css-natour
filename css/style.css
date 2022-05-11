@@ -6,3 +6,39 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* inheritance css by body */
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    /* add padding to body but wont inheritance to child */
+    padding: 30px;
+}
+
+.header {
+    /* 95% of view port height */
+    /* show 5% in the end of page */
+    height: 95vh;
+    /* 2 backimg layer */
+    /* color cover up the image and the actual backimg */
+    background-image:
+        linear-gradient(
+            to right bottom,
+            hsla(111, 55%, 64%, 0.8),
+            hsla(160, 64%, 43%, 0.8)),
+        url(../img/hero.jpg);
+    /* fit element inside of box with cover */
+    background-size: cover;
+    background-position: top;
+    /* https://bennettfeely.com/clippy/ */
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
